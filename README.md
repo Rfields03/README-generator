@@ -5,11 +5,7 @@
   
 A node.js application that uses user input from inquirer to populate a README.md file for user repository.
   
-Below is the gif showing the functionality of the application:
-  
-![Rfields03 README Generator](XXXX FILL IN GIF XXXXXX)
-  
-The full movie file showing functionality of the application can be found [here](XXXX SCREENCASTIFY XXXXX)  
+The full movie file showing functionality of the application can be found [here](XXXX SCREENCASTIFY XXXXX)
   
 ## User Story
   
@@ -49,7 +45,11 @@ THEN I am taken to the corresponding section of the README
 - [Contributing](#contributing)
 - [Questions](#questions)
 
-## Installation   
+## Installation
+
+`Inquirer`
+
+`Axios`
   
 `npm init`
   
