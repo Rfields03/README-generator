@@ -1,90 +1,98 @@
-// TODO: Include packages needed for this application
-const fs = require("fs");
-const util = require("util");
-const inquirer = require("inquirer");
-const generateReadme = require(".generateReadme")
-const writeFileAsync = util.promisify(fs.writeFile);
+// External packages
+const inquirer = require('inquirer');
+const fs = require('fs');
+const util = require('util');
 
-// TODO: Create an array of questions for user input
-function promptUser(){
-  return inquirer.prompt([
+// Internal modules
+const api = require('./utils/api.js');
+const generateMarkdown = require('./utils/generateMarkdown.js');
+
+// Inquirer prompts for userResponses
+const questions = [
     {
-      type: "input",
-      name: "projectTitle",
-      message: "What is the project title?",
+        type: 'input',
+        message: "What is your GitHub username? (No @ needed)",
+        name: 'username',
+        default: 'Rfields03',
     },
     {
-      type: "input",
-      name: "description",
-      message: "what is the project description?",
+        type: 'input',
+        message: "What is the name of your GitHub repo?",
+        name: 'repo',
+        default: 'readme-generator',
     },
     {
-      type: "input",
-      name: "table of contents",
-      message: "Table of Contents",
+        type: 'input',
+        message: "What is the title of your project?",
+        name: 'title',
+        default: 'Project Title',
     },
     {
-      type: "input",
-      name: "installation",
-      message: "Describe the installation process if any: ",
+        type: 'input',
+        message: "Write a description of your project.",
+        name: 'description',
+        default: 'Project Description',
     },
     {
-      type: "input",
-      name: "usage",
-      message: "What is this project usage for?",
+        type: 'input',
+        message: "If applicable, describe the steps required to install your project for the Installation section.",
+        name: 'installation'
     },
     {
-      type: "list",
-      name: "license",
-      message: "Chose the appropriate license for this project: ",
-      choices: [
-        "Apache",
-        "Academic",
-        "GNU",
-        "ISC",
-        "MIT",
-        "Mozilla",
-        "Open"
-      ]
+        type: 'input',
+        message: "Provide instructions and examples of your project in use for the Usage section.",
+        name: 'usage'
     },
     {
-      type: "input",
-      name: "contributing",
-      message: "Who are the contributors of this project?"
+        type: 'input',
+        message: "If applicable, provide guidelines on how other developers can contribute to your project.",
+        name: 'contributing'
     },
     {
-      type: "input",
-      name: "tests",
-      message: "Is there a test included?"
+        type: 'input',
+        message: "If applicable, provide any tests written for your application and provide examples on how to run them.",
+        name: 'tests'
     },
     {
-      type: "input",
-      name: "questions",
-      message: "What do I do if I have an issue? "
-    },
-    {
-      type: "input",
-      name: "username",
-      message: "Please enter your GitHub username: "
-    },
-    {
-      type: "input",
-      name: "email",
-      message: "Please enter your email: "
+        type: 'list',
+        message: "Choose a license for your project.",
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+        name: 'license'
     }
-  ]);
+];
+
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+          return console.log(err);
+        }
+      
+        console.log("Success! Your README.md file has been generated")
+    });
 }
 
-// TODO: Create a function to initialize app
+const writeFileAsync = util.promisify(writeToFile);
+
+
 async function init() {
-  try {
-    const answers = await promptUser();
-    const generateContent = generateReadme(answers);
-    await writeFileAsync('.README.md', generateContent);
-    console.log('Successfully wrote to README.md');
-  } catch(err) {
-    console.log(err);
-  }
-}
+    try {
+
+        const userResponses = await inquirer.prompt(questions);
+        console.log("Your responses: ", userResponses);
+        console.log("Thank you for your responses! Fetching your GitHub data next...");
+    
+        const userInfo = await api.getUser(userResponses);
+        console.log("Your GitHub user info: ", userInfo);
+    
+        console.log("Generating your README next...")
+        const markdown = generateMarkdown(userResponses, userInfo);
+        console.log(markdown);
+    
+        await writeFileAsync('ExampleREADME.md', markdown);
+
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 init();
