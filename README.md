@@ -5,10 +5,6 @@
   
 A node.js application that uses user input from inquirer to populate a README.md file for user repository.
   
-The full movie file showing functionality of the application can be found [here](XXXX SCREENCASTIFY XXXXX)
-  
-
-
 ## User Story
   
 ```
