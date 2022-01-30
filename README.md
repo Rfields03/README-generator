@@ -66,7 +66,7 @@ Run the following command at the root of your project and answer the prompted qu
 
 ## Demo
 
-
+![](https://github.com/Rfields03/README-generator/blob/Main/README%20generator%20demo.gif)
 
 ## Contributing
 [Robert Field](https://github.com/Rfields03)
