@@ -41,6 +41,7 @@ THEN I am taken to the corresponding section of the README
 - [Installation](#installation)
 - [Usage](#usage)
 - [Demo](#demo)
+- [Links](#links)
 - [Contributing](#contributing)
 
 ## Installation
