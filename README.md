@@ -42,7 +42,6 @@ THEN I am taken to the corresponding section of the README
 - [Usage](#usage)
 - [Demo](#demo)
 - [Contributing](#contributing)
-- [Questions](#questions)
 
 ## Installation
 
@@ -67,5 +66,3 @@ Run the following command at the root of your project and answer the prompted qu
 ## Contributing
 [Robert Field](https://github.com/Rfields03)
 
-## Questions
-Contact me with any questions: [email](mailto:rfields03@gmail.com)<br />
