@@ -7,6 +7,8 @@ A node.js application that uses user input from inquirer to populate a README.md
   
 The full movie file showing functionality of the application can be found [here](XXXX SCREENCASTIFY XXXXX)
   
+
+
 ## User Story
   
 ```
@@ -42,6 +44,7 @@ THEN I am taken to the corresponding section of the README
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Demo](#demo)
 - [Contributing](#contributing)
 - [Questions](#questions)
 
@@ -60,6 +63,10 @@ THEN I am taken to the corresponding section of the README
 Run the following command at the root of your project and answer the prompted questions:
   
 `node index.js`
+
+## Demo
+
+
 
 ## Contributing
 [Robert Field](https://github.com/Rfields03)
