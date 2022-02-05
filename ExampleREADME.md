@@ -16,7 +16,7 @@
   
   ## License
   
-  MIT License
+  GNU AGPLv3
   
   ---
   
