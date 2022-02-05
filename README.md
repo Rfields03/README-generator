@@ -62,7 +62,7 @@ Run the following command at the root of your project and answer the prompted qu
 
 ## Demo
 
-![](https://github.com/Rfields03/README-generator/blob/Main/Node%20Assignment%20Demo.gif)
+![](https://drive.google.com/file/d/1IL22s86vdzZdM5W76f9tCtJT5CTaQOf-/view)
 
 ## Links
 
