@@ -12,11 +12,18 @@
   Project Description
 
   ## Table of Contents
+  * [Installation](#installation)
   * [License](#license)
+  
+  ## Installation
+  
+  *Steps required to install project and how to get the development environment running:*
+  
+  node index.js
   
   ## License
   
-  GNU AGPLv3
+  MIT License
   
   ---
   

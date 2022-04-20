@@ -62,13 +62,11 @@ Run the following command at the root of your project and answer the prompted qu
 
 ## Demo
 
-![](https://github.com/Rfields03/README-generator/blob/Main/Node%20Assignment%20Demo.gif)
+![](https://drive.google.com/file/d/1NkOsTxUDLdoxzlrTZ5ZgE1OMam5kRZBD/view)
 
 ## Links
 
 GitHub Repo - https://github.com/Rfields03/README-generator
-
-Link - https://rfields03.github.io/README-generator/
 
 ## Contributing
 [Robert Field](https://github.com/Rfields03)
