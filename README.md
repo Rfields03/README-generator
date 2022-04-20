@@ -62,7 +62,7 @@ Run the following command at the root of your project and answer the prompted qu
 
 ## Demo
 
-![Generate README demo](https://drive.google.com/file/d/1NkOsTxUDLdoxzlrTZ5ZgE1OMam5kRZBD/view)
+![](https://drive.google.com/file/d/1NkOsTxUDLdoxzlrTZ5ZgE1OMam5kRZBD/view)
 
 ## Links
 
